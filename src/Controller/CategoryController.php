@@ -26,7 +26,8 @@ class CategoryController extends AbstractController
             }
             if (empty($errors)) {
                 $categoryManager = new CategoryManager();
-                $id = $categoryManager->insert($category);
+                //$id = $categoryManager->insert($category);
+                $categoryManager->insert($category);
                 header('Location: /categories');
                 return null;
             }
